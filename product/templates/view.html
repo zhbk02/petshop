@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Products </title>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <style>
+table {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+th {
+  background-color: #fce7bd;
+  color: white;
+}
+
+th,
+td {
+    width: 150px;
+    text-align: center;
+    background-color: #fce7bd;
+    font-size: 100%;
+    color: midnightblue;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+h2 {
+  color: #4287f5;
+}
+    </style>
+
+</head>
+<body>
+
+
+
+<div class="container jumbotron">
+    <center>
+        <h1> <b>Pet</b>-shop </h1>
+      <div class="container center-block">
+    <div class='table'>
+        <table class ='highlight' border="0" cellpadding="10" cellspacing="0">
+            <thead>
+            <tr>
+                <th>index</th>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+                     {% for product in products %}
+                <tr>
+                    <td>{{ product.id }}</td>
+                     <td>{{ product.title }}</td>
+                    <td>{{ product.category }}</td>
+                    <td>{{ product.price }}$</td>
+                    <td>{{ product.desc }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+              <h2> designed by zhibek </h2>
+    </div>
+  </div>
+    </center>
+</div>
+</body>
+</html>
